@@ -20,8 +20,8 @@ export default async function Posts() {
     return (
         <>
             <Box>{posts.map((i) => {
-                return <div>
-                    <Link key={i.id} href={`/posts/${i.id}`}>{i.title}</Link>
+                return <div key={i.id} >
+                    <Link href={`/posts/${i.id}`}>{i.title}</Link>
                 </div>
 
             })}</Box>
