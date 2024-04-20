@@ -5,7 +5,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Link from "next/link";
-import {CssBaseline} from "@mui/material";
 
 const pages = ["about", "posts"];
 

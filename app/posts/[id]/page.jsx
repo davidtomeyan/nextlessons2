@@ -13,7 +13,7 @@ export async function generateMetadata({params}) {
 }
 
 const Post = async ({params}) => {
-    const post = await getPost(params.id)
+    const post = await getPost(params.id=null)
     return (
         <div>
             <h3>{post.title}</h3>
