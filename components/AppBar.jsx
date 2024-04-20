@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Link from "next/link";
 
-const pages = ["about", "posts"];
+
 
 function ResponsiveAppBar() {
 
@@ -15,7 +15,7 @@ function ResponsiveAppBar() {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}, justifyContent: "center"}}>
-                        {pages.map((page) => (
+                        {["about", "posts"].map((page) => (
                             <Link  key={page} href={`/${page}`} style={{textDecoration: "none"}}>
                                 <Button
                                     sx={{my: 2, color: 'white', display: 'block'}}
