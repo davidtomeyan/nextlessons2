@@ -17,9 +17,8 @@ function ResponsiveAppBar() {
                 <Toolbar disableGutters>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}, justifyContent: "center"}}>
                         {pages.map((page) => (
-                            <Link href={`/${page}`} style={{textDecoration: "none"}}>
+                            <Link  key={page} href={`/${page}`} style={{textDecoration: "none"}}>
                                 <Button
-                                    key={page}
                                     sx={{my: 2, color: 'white', display: 'block'}}
                                 >
                                     {page}
