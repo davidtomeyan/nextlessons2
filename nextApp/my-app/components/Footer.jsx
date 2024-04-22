@@ -1,6 +1,7 @@
+import Box from "@mui/material/Box";
 
 function Footer() {
-    return <div style={{
+    return <Box sx={{
         display: "flex",
         alignItems: "center",
         width: "100%",
@@ -9,10 +10,10 @@ function Footer() {
         color: "#ffffff",
         justifyContent: "center"
     }}>
-        <div style={{textAlign: "center",}}>
+        <Box sx={{textAlign: "center",}}>
             Tomeyan
-        </div>
-    </div>
+        </Box>
+    </Box>
 }
 
 export default Footer

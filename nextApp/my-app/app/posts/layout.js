@@ -1,3 +1,4 @@
+import {Typography} from "@mui/material";
 
 import React from "react";
 
@@ -10,7 +11,7 @@ export const metadata = {
 export default function Layout({children}) {
     return (
         <>
-            <text style={{textAlign: "center", padding: "20px"}}>posts</text>
+            <Typography variant="h3" sx={{textAlign: "center", padding: "20px"}}>posts</Typography>
             {children}
         </>
     );
