@@ -6,8 +6,8 @@ export const metadata = {
 };
 export default function Page() {
     return (
-        <Box>
-            <Typography variant="h3" sx={{textAlign: "center", padding: "20px"}}>about page</Typography>
+        <div>
+            <text style={{textAlign: "center", padding: "20px"}}>about page</text>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur debitis, dicta. Accusamus amet est
                 excepturi facilis fugiat id impedit ipsum molestias neque placeat quae quis ratione reiciendis rem
                 repudiandae ut vel. Ab ea excepturi explicabo impedit libero nobis nostrum reprehenderit voluptas. A
@@ -219,7 +219,7 @@ export default function Page() {
                 dolorum
                 illo optio unde voluptatum. Assumenda consequuntur debitis delectus dolor, et expedita explicabo hic
                 modi molestiae neque nesciunt quam quod, repellat reprehenderit sapiente sint voluptas?</p>
-        </Box>
+        </div>
 
     )
 }

@@ -1,6 +1,6 @@
 import {Inter} from "next/font/google";
 import AppBar from "@/components/AppBar";
-import {AppRouterCacheProvider} from '@mui/material-nextjs/v13-appRouter';
+// import {AppRouterCacheProvider} from '@mui/material-nextjs/v13-appRouter';
 import "./Globals.css"
 import {Container} from "@mui/material";
 import Box from "@mui/material/Box";
@@ -17,15 +17,13 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className={inter.className}>
-        <AppRouterCacheProvider>
-            <Box className={"fixedContainer"}>
+            <div className={"fixedContainer"}>
                 <AppBar/>
-                <Container sx={{minHeight: "100%", padding: "20px 0 30px 0"}}>
+                <div sx={{minHeight: "80%", padding: "20px 0 30px 0"}}>
                     {children}
-                </Container>
+                </div>
                 <Footer/>
-            </Box>
-        </AppRouterCacheProvider>
+            </div>
         </body>
         </html>
     );

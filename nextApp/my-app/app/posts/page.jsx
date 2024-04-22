@@ -19,12 +19,12 @@ export default async function Posts() {
     const posts = await getData()
     return (
         <>
-            <Box>{posts?.map((i) => {
+            <div>{posts?.map((i) => {
                 return <div key={i.id} >
                     <Link href={`/posts/${i.id}`}>{i.title}</Link>
                 </div>
 
-            })}</Box>
+            })}</div>
         </>
     )
 }
