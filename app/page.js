@@ -1,5 +1,6 @@
 import Link from "next/link";
 import classes from "./page.module.css";
+import {ListItem, ListItemButton, ListItemText} from "@mui/material";
 
 export const metadata = {
   title: "Create Next App",
@@ -9,16 +10,26 @@ const getData = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts")
   return response.json()
 }
+function renderRow(props) {
+  const { index, id,title } = props;
+
+  return (
+      <ListItem  key={index} component="div" disablePadding>
+        <ListItemButton>
+          <Link href={`/${id}`}>
+            <ListItemText primary={title} />
+          </Link>
+        </ListItemButton>
+      </ListItem>
+  );
+}
+
 export default async function Home() {
   const posts = await getData()
   return (
     <main>{
-      posts.map((i)=>{
-        return <ul key={i.id}>
-          <li>
-            <Link href={`/${i.id}`}>{i.title}</Link>
-          </li>
-        </ul>
+      posts.map((e,index)=>{
+        return renderRow({...e,index})
       })}</main>
   );
 }
