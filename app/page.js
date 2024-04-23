@@ -1,4 +1,5 @@
 import Link from "next/link";
+import classes from "./page.module.css";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,9 +14,11 @@ export default async function Home() {
   return (
     <main>{
       posts.map((i)=>{
-        return <div key={i.id}>
-          <Link href={`/${i.id}`}>{i.title}</Link>
-        </div>
+        return <ul key={i.id}>
+          <li>
+            <Link href={`/${i.id}`}>{i.title}</Link>
+          </li>
+        </ul>
       })}</main>
   );
 }
